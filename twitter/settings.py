@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # third party
     'rest_framework',
+
+    # project apps
+    'accounts',
+    'tweets',
 ]
 #配置翻页机制
 REST_FRAMEWORK = {

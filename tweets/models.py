@@ -12,6 +12,10 @@ class Tweet(models.Model):
         help_text = 'who posts this tweet',
     )
 
+    class Meta:
+        index_together = (('user', 'created_at'),)
+        ordering = ('user', '-created_at')
+
     content = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True) #只有创建的时候会更细数值
     # updated_at = models.DateTimeField(auto_now=True) #每次更改的时候都会更新数值
