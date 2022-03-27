@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # project apps
     'accounts',
     'tweets',
+    'friendships'
 ]
 #配置翻页机制
 REST_FRAMEWORK = {

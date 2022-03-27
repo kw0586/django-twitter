@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from utils.time_helpers import utc_now
 
 
+# user.tweet_set
+# 等价于
+# Tweet.objects.filter(user=user)
 class Tweet(models.Model):
 
     user = models.ForeignKey(
